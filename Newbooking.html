@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your student accommodation online - Secure your room at StudentHub today">
+    <meta name="keywords" content="book student accommodation, room booking, student housing application">
+    <title>Book Your Room - Student Accommodation Hub</title>
+    <link rel="stylesheet" href="css/New.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">The Student Accommodation Hub</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                     <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="List your property.html">List your property</a></li>
+    </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <div class="container">
+                <h1>Book Your Student Accommodation</h1>
+                <p>Fill out the form below to secure your room. We'll contact you within 24 hours to confirm your booking.</p>
+                
+                <form id="bookingForm" onsubmit="return validateBookingForm()">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roomType">Room Type *</label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="">Select Room Type</option>
+                            <option value="single">Single Room - R4,500/month</option>
+                            <option value="shared">Shared Room - R3,200/month</option>
+                            <option value="apartment">Studio Apartment - R6,800/month</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date *</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date *</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                    </div>
+                    
+                    <div id="availability"></div>
+                    
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">Submit Booking Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Student Accommodation Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
