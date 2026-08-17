@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive &amp; Oak Café | Reservations &amp; Contact</title>
+    <meta name="description" content="Book a table or get in touch with Olive & Oak Café.">
+   
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">Olive &amp; Oak <span>Café</span></a>
+        </div>
+        <nav class="main-nav">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Reservations &amp; Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <section class="page-banner">
+            <h1>Reservations &amp; Contact</h1>
+        </section>
+
+        <section class="contact-layout">
+
+            <!-- Reservation form - validation added in Part 3 (JavaScript) -->
+            <div class="reservation-form">
+                <h2>Book a Table</h2>
+                <form id="reservationForm" action="#" method="post" novalidate>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+
+                    <span class="form-error" id="formError" aria-live="polite"></span>
+
+                    <button type="submit" class="btn btn-primary">Request Booking</button>
+                </form>
+            </div>
+
+            <!-- Contact details and map -->
+            <div class="contact-info">
+                <h2>Visit Us</h2>
+                <p><strong>Address:</strong><br>123 Main Road, South Africa</p>
+                <p><strong>Phone:</strong> <a href="tel:0123456789">012 345 6789</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a></p>
+
+                <h3>Opening Hours</h3>
+                <ul class="hours-list">
+                    <li>Monday – Friday: 07:00 – 17:00</li>
+                    <li>Saturday: 08:00 – 15:00</li>
+                    <li>Sunday: 08:00 – 13:00</li>
+                </ul>
+
+                <!-- Map embed placeholder - to be added with Google Maps embed -->
+                <div class="map-embed">
+                    <iframe
+                        title="Olive and Oak Café location"
+                        src=""
+                        width="100%"
+                        height="250"
+                        style="border:0;"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-about">
+                <h3>Olive &amp; Oak Café</h3>
+                <p>Honest, locally sourced food in a warm community space.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reservations &amp; Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Visit Us</h3>
+                <p>123 Main Road<br>South Africa</p>
+                <p>Tel: 012 345 6789</p>
+                <p>Email: hello@oliveandoakcafe.co.za</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Olive &amp; Oak Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>
