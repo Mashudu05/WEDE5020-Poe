@@ -1,115 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive &amp; Oak Café | Home</title>
-    <meta name="description" content="Olive & Oak Café - honest, locally sourced food in a warm community space.">
-    <link rel="stylesheet" href="style.css"
-
+    <title>Olive &amp; Oak Café | All-Day Breakfast &amp; Lunch, Locally Sourced</title>
+    <meta name="description" content="Family-owned café serving all-day breakfast, lunch and coffee made from locally sourced, farm-to-table ingredients. Book a table or view our menu.">
+    <meta name="author" content="Olive &amp; Oak Café">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5f6e42">
+    <link rel="canonical" href="https://mashudu05.github.io/olive-oak-cafe/">
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Olive &amp; Oak Café">
+    <meta property="og:title" content="Olive &amp; Oak Café | All-Day Breakfast &amp; Lunch, Locally Sourced">
+    <meta property="og:description" content="Family-owned café serving all-day breakfast, lunch and coffee made from locally sourced, farm-to-table ingredients. Book a table or view our menu.">
+    <meta property="og:url" content="https://mashudu05.github.io/olive-oak-cafe/">
+    <meta property="og:image" content="https://mashudu05.github.io/olive-oak-cafe/images/cafe-breakfast-table-hero.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://jsonplaceholder.typicode.com; form-action 'self' mailto: https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Olive & Oak Café", "url": "https://mashudu05.github.io/olive-oak-cafe/", "image": "https://mashudu05.github.io/olive-oak-cafe/images/cafe-breakfast-table-hero.jpg", "description": "Family-owned café serving all-day breakfast and lunch made with locally sourced, farm-to-table ingredients.", "email": "hello@oliveandoakcafe.co.za", "telephone": "+27123456789", "servesCuisine": ["Breakfast", "Lunch", "Coffee"], "priceRange": "R35–R98", "address": {"@type": "PostalAddress", "streetAddress": "123 Main Road", "addressCountry": "ZA"}, "geo": {"@type": "GeoCoordinates", "latitude": -26.2041, "longitude": 28.0473}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "15:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "13:00"}]}</script>
+    <script src="js/site-data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- ===== HEADER ===== -->s
     <header class="site-header">
-        <div class="logo">
-            <a href="index.html">Olive &amp; Oak <span>Café</span></a>
-        </div>
-
-        <!-- ===== NAVIGATION ===== -->
-        <nav class="main-nav">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">Our Story</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Reservations &amp; Contact</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">Olive &amp; Oak <span>Café</span></a></div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">&#9776;</button>
+            <ul id="navMenu"><li><a href="index.html" class="active" aria-current="page">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html">Enquiries</a></li><li><a href="contact.html">Contact</a></li></ul>
         </nav>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-
-        <!-- Hero section -->
+    <main id="main">
         <section class="hero">
             <div class="hero-content">
-                <h1>Good Food, Honest Ingredients</h1>
-                <p>All-day breakfast &amp; lunch, made from locally sourced produce.</p>
-                <a href="contact.html" class="btn btn-primary">Book a Table</a>
+                <p class="eyebrow">Family-owned · Farm-to-table</p>
+                <h1>All-Day Breakfast &amp; Lunch, Locally Sourced</h1>
+                <p class="lead">Honest food made from ingredients grown close to home, served from open to close.</p>
+                <p class="open-status" aria-live="polite"></p><br>
+                <a href="enquiry.html" class="btn btn-primary">Book a Table</a>
                 <a href="menu.html" class="btn btn-secondary">View Menu</a>
             </div>
         </section>
 
-        <!-- Introduction section -->
-        <section class="intro">
+        <section class="intro reveal">
             <h2>Welcome to Olive &amp; Oak</h2>
             <p>
-                Olive &amp; Oak Café is a family-owned spot serving all-day breakfast and lunch,
-                built around locally sourced, farm-to-table ingredients. Whether you're grabbing
+                Olive &amp; Oak Café is a family-owned café serving all-day breakfast and lunch,
+                built around locally sourced, farm-to-table ingredients. Whether you are grabbing
                 a quick weekday lunch, settling in for a relaxed weekend breakfast, or looking
-                for a quiet corner to study with good Wi-Fi, we've got a table for you.
+                for a quiet corner to study with good Wi-Fi, we have a table for you.
+            </p>
+            <p>
+                Read <a href="about.html">our story</a>, browse the <a href="menu.html">breakfast, lunch and coffee menu</a>,
+                or <a href="enquiry.html">enquire about private functions and catering</a>.
             </p>
         </section>
 
-        <!-- Highlights section -->
         <section class="highlights">
-            <h2>Why People Come Back</h2>
+            <h2 class="reveal">Why People Come Back</h2>
             <div class="highlight-cards">
-                <article class="card">
-                    <h3>Locally Sourced</h3>
-                    <p>Ingredients sourced from local farms and suppliers, every day.</p>
-                </article>
-                <article class="card">
-                    <h3>All-Day Menu</h3>
-                    <p>Breakfast and lunch served from open to close — no cut-off times.</p>
-                </article>
-                <article class="card">
-                    <h3>Community Space</h3>
-                    <p>A relaxed spot to work, meet, or just enjoy a good cup of coffee.</p>
-                </article>
+                <article class="card reveal"><h3>Locally Sourced</h3><p>Ingredients from local farms and suppliers, every day.</p></article>
+                <article class="card reveal"><h3>All-Day Menu</h3><p>Breakfast and lunch served from open to close, with no cut-off times.</p></article>
+                <article class="card reveal"><h3>Community Space</h3><p>A relaxed spot to work, meet, or enjoy a good cup of coffee.</p></article>
             </div>
         </section>
 
-        <!-- Call to action section -->
-        <section class="cta">
-            <h2>Come Say Hello</h2>
-            <p>Open seven days a week. Reserve a table online or just walk in.</p>
-            <a href="contact.html" class="btn btn-primary">Reserve a Table</a>
+        <section class="featured">
+            <h2 class="reveal">Customer Favourites</h2>
+            <div id="featuredItems" class="menu-grid"></div>
+            <noscript><p>Enable JavaScript to see our favourites, or <a href="menu.html">view the full menu</a>.</p></noscript>
+            <p><a href="menu.html">See the full menu &rarr;</a></p>
         </section>
 
+        <section class="cta reveal">
+            <h2>Come Say Hello</h2>
+            <p>Open seven days a week. Reserve a table online or just walk in.</p>
+            <a href="enquiry.html" class="btn btn-primary">Reserve a Table</a>
+            <a href="contact.html" class="btn btn-secondary">Get Directions</a>
+        </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <div class="footer-columns">
             <div class="footer-about">
-                <h3>Olive &amp; Oak Café</h3>
+                <p class="footer-title">Olive &amp; Oak Café</p>
                 <p>Honest, locally sourced food in a warm community space.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
             </div>
             <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Reservations &amp; Contact</a></li>
-                </ul>
+                <p class="footer-title">Quick Links</p>
+                <ul><li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html">Enquiries</a></li><li><a href="contact.html">Contact</a></li></ul>
             </div>
             <div class="footer-contact">
-                <h3>Visit Us</h3>
+                <p class="footer-title">Visit Us</p>
                 <p>123 Main Road<br>South Africa</p>
-                <p>Tel: 012 345 6789</p>
-                <p>Email: hello@oliveandoakcafe.co.za</p>
+                <p>Tel: <a href="tel:+27123456789">012 345 6789</a></p>
+                <p>Email: <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Olive &amp; Oak Café. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom"><p>&copy; <span class="js-year">2026</span> Olive &amp; Oak Café. All rights reserved.</p></div>
     </footer>
-
-   
 </body>
 </html>

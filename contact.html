@@ -1,131 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive &amp; Oak Café | Reservations &amp; Contact</title>
-    <meta name="description" content="Book a table or get in touch with Olive & Oak Café.">
-   <link rel="stylesheet" href="style.css"
+    <title>Contact &amp; Directions | Olive &amp; Oak Café</title>
+    <meta name="description" content="Contact Olive &amp; Oak Café with a question, compliment or feedback. Find our address, opening hours, phone number and an interactive map with directions.">
+    <meta name="author" content="Olive &amp; Oak Café">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5f6e42">
+    <link rel="canonical" href="https://mashudu05.github.io/olive-oak-cafe/contact.html">
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Olive &amp; Oak Café">
+    <meta property="og:title" content="Contact &amp; Directions | Olive &amp; Oak Café">
+    <meta property="og:description" content="Contact Olive &amp; Oak Café with a question, compliment or feedback. Find our address, opening hours, phone number and an interactive map with directions.">
+    <meta property="og:url" content="https://mashudu05.github.io/olive-oak-cafe/contact.html">
+    <meta property="og:image" content="https://mashudu05.github.io/olive-oak-cafe/images/cafe-breakfast-table-hero.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://jsonplaceholder.typicode.com; form-action 'self' mailto: https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Olive & Oak Café", "url": "https://mashudu05.github.io/olive-oak-cafe/", "image": "https://mashudu05.github.io/olive-oak-cafe/images/cafe-breakfast-table-hero.jpg", "description": "Family-owned café serving all-day breakfast and lunch made with locally sourced, farm-to-table ingredients.", "email": "hello@oliveandoakcafe.co.za", "telephone": "+27123456789", "servesCuisine": ["Breakfast", "Lunch", "Coffee"], "priceRange": "R35–R98", "address": {"@type": "PostalAddress", "streetAddress": "123 Main Road", "addressCountry": "ZA"}, "geo": {"@type": "GeoCoordinates", "latitude": -26.2041, "longitude": 28.0473}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "15:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "13:00"}]}</script>
+    <script src="vendor/leaflet/leaflet.js" defer></script>
+    <script src="js/site-data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/map.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- ===== HEADER ===== -->
     <header class="site-header">
-        <div class="logo">
-            <a href="index.html">Olive &amp; Oak <span>Café</span></a>
-        </div>
-        <nav class="main-nav">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Our Story</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="active">Reservations &amp; Contact</a></li>
-            </ul>
+        <div class="logo"><a href="index.html">Olive &amp; Oak <span>Café</span></a></div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">&#9776;</button>
+            <ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html">Enquiries</a></li><li><a href="contact.html" class="active" aria-current="page">Contact</a></li></ul>
         </nav>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
+    <main id="main">
+        <section class="page-banner"><h1>Contact &amp; Directions</h1></section>
 
-        <section class="page-banner">
-            <h1>Reservations &amp; Contact</h1>
-        </section>
+        <section>
+            <div class="form-layout">
+                <div class="form-card">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill in the form and we will prepare an email for you to send. To book a table, use our <a href="enquiry.html">enquiry form</a>.</p>
+                    <form id="contactForm" action="mailto:hello@oliveandoakcafe.co.za" method="post" enctype="text/plain" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full name <span class="req">*</span></label>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="name-error">
+                            <span class="field-error" id="name-error"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email address <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                                <span class="field-error" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone number (optional)</label>
+                                <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="082 123 4567" pattern="(\+27|0)[0-9 \-]{8,14}" aria-describedby="phone-error">
+                                <span class="field-error" id="phone-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageType">What is your message about? <span class="req">*</span></label>
+                            <select id="messageType" name="messageType" required aria-describedby="messageType-error">
+                                <option value="">Choose one…</option>
+                                <option value="General question">General question</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Compliment">Compliment</option>
+                                <option value="Complaint">Complaint</option>
+                                <option value="Lost property">Lost property</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="field-error" id="messageType-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message <span class="req">*</span></label>
+                            <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000" aria-describedby="message-error message-count"></textarea>
+                            <small class="hint char-count" id="message-count">0 / 1000</small>
+                            <span class="field-error" id="message-error"></span>
+                        </div>
+                        <div class="hp" aria-hidden="true">
+                            <label for="website">Leave this field empty</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <p class="form-summary" id="formSummary" role="alert"></p>
+                        <button type="submit" class="btn btn-primary">Prepare my email</button>
+                    </form>
 
-        <section class="contact-layout">
+                    <div class="email-preview" id="emailPreview" hidden>
+                        <h3>Your email is ready</h3>
+                        <dl>
+                            <dt>To</dt><dd id="previewTo"></dd>
+                            <dt>Subject</dt><dd id="previewSubject"></dd>
+                            <dt>Message</dt><dd id="previewBody"></dd>
+                        </dl>
+                        <a class="btn btn-primary" id="sendEmailLink" href="#">Send email</a>
+                        <button type="button" class="btn btn-secondary" id="editMessage">Edit message</button>
+                        <p class="hint">“Send email” opens your email app with everything filled in. Press send there to finish.</p>
+                    </div>
+                </div>
 
-            <!-- Reservation form - validation added in Part 3 (JavaScript) -->
-            <div class="reservation-form">
-                <h2>Book a Table</h2>
-                <form id="reservationForm" action="#" method="post" novalidate>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date" required>
-
-                    <label for="time">Preferred Time</label>
-                    <input type="time" id="time" name="time" required>
-
-                    <label for="guests">Number of Guests</label>
-                    <input type="number" id="guests" name="guests" min="1" max="20" required>
-
-                    <label for="message">Special Requests</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-
-                    <span class="form-error" id="formError" aria-live="polite"></span>
-
-                    <button type="submit" class="btn btn-primary">Request Booking</button>
-                </form>
-            </div>
-
-            <!-- Contact details and map -->
-            <div class="contact-info">
-                <h2>Visit Us</h2>
-                <p><strong>Address:</strong><br>123 Main Road, South Africa</p>
-                <p><strong>Phone:</strong> <a href="tel:0123456789">012 345 6789</a></p>
-                <p><strong>Email:</strong> <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a></p>
-
-                <h3>Opening Hours</h3>
-                <ul class="hours-list">
-                    <li>Monday – Friday: 07:00 – 17:00</li>
-                    <li>Saturday: 08:00 – 15:00</li>
-                    <li>Sunday: 08:00 – 13:00</li>
-                </ul>
-
-                <!-- Map embed placeholder - to be added with Google Maps embed -->
-                <div class="map-embed">
-                    <iframe
-                        title="Olive and Oak Café location"
-                        src=""
-                        width="100%"
-                        height="250"
-                        style="border:0;"
-                        loading="lazy">
-                    </iframe>
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    <p class="open-status" aria-live="polite"></p>
+                    <address>
+                        123 Main Road<br>South Africa<br>
+                        Phone: <a href="tel:+27123456789">012 345 6789</a><br>
+                        Email: <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a>
+                    </address>
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li>Monday to Friday: 07:00 – 17:00</li>
+                        <li>Saturday: 08:00 – 15:00</li>
+                        <li>Sunday: 08:00 – 13:00</li>
+                    </ul>
+                    <div id="map" role="region" aria-label="Map showing the location of Olive and Oak Café"></div>
+                    <noscript><p>The interactive map needs JavaScript. We are at 123 Main Road, South Africa.</p></noscript>
+                    <p class="map-links"><a id="directionsLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get directions in Google Maps</a></p>
                 </div>
             </div>
-
         </section>
-
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <div class="footer-columns">
             <div class="footer-about">
-                <h3>Olive &amp; Oak Café</h3>
+                <p class="footer-title">Olive &amp; Oak Café</p>
                 <p>Honest, locally sourced food in a warm community space.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
             </div>
             <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Reservations &amp; Contact</a></li>
-                </ul>
+                <p class="footer-title">Quick Links</p>
+                <ul><li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html">Enquiries</a></li><li><a href="contact.html">Contact</a></li></ul>
             </div>
             <div class="footer-contact">
-                <h3>Visit Us</h3>
+                <p class="footer-title">Visit Us</p>
                 <p>123 Main Road<br>South Africa</p>
-                <p>Tel: 012 345 6789</p>
-                <p>Email: hello@oliveandoakcafe.co.za</p>
+                <p>Tel: <a href="tel:+27123456789">012 345 6789</a></p>
+                <p>Email: <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Olive &amp; Oak Café. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom"><p>&copy; <span class="js-year">2026</span> Olive &amp; Oak Café. All rights reserved.</p></div>
     </footer>
-
-   
 </body>
 </html>

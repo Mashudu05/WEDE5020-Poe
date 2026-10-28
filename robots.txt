@@ -1,0 +1,6 @@
+# robots.txt for Olive & Oak Café
+# All search engines may crawl the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://mashudu05.github.io/olive-oak-cafe/sitemap.xml

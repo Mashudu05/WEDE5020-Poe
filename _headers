@@ -1,0 +1,18 @@
+# Security + caching headers for Netlify (GitHub Pages ignores this file;
+# the CSP <meta> tag in each page still applies there)
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://jsonplaceholder.typicode.com; form-action 'self' mailto: https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+
+/css/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=86400
+/images/*
+  Cache-Control: public, max-age=604800
+/vendor/*
+  Cache-Control: public, max-age=2592000

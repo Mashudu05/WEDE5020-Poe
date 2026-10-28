@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries | Table Bookings, Functions &amp; Catering | Olive &amp; Oak</title>
+    <meta name="description" content="Enquire about table reservations, private functions or catering at Olive &amp; Oak Café. Check availability and get an instant price estimate.">
+    <meta name="author" content="Olive &amp; Oak Café">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5f6e42">
+    <link rel="canonical" href="https://mashudu05.github.io/olive-oak-cafe/enquiry.html">
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Olive &amp; Oak Café">
+    <meta property="og:title" content="Enquiries | Table Bookings, Functions &amp; Catering | Olive &amp; Oak">
+    <meta property="og:description" content="Enquire about table reservations, private functions or catering at Olive &amp; Oak Café. Check availability and get an instant price estimate.">
+    <meta property="og:url" content="https://mashudu05.github.io/olive-oak-cafe/enquiry.html">
+    <meta property="og:image" content="https://mashudu05.github.io/olive-oak-cafe/images/cafe-breakfast-table-hero.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; style-src 'self'; script-src 'self'; connect-src 'self' https://jsonplaceholder.typicode.com; form-action 'self' mailto: https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="vendor/jquery/jquery-3.7.1.min.js" defer></script>
+    <script src="js/site-data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/faq.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="logo"><a href="index.html">Olive &amp; Oak <span>Café</span></a></div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">&#9776;</button>
+            <ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html" class="active" aria-current="page">Enquiries</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-banner"><h1>Enquiries &amp; Bookings</h1></section>
+
+        <section>
+            <p>Tell us what you have in mind and we will check availability and give you an estimate straight away. For general questions, use our <a href="contact.html">contact page</a>.</p>
+            <div class="form-layout">
+                <div class="form-card">
+                    <h2>Make an Enquiry</h2>
+                    <form id="enquiryForm" action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate>
+                        <div class="form-group">
+                            <label for="enquiryType">I would like to enquire about <span class="req">*</span></label>
+                            <select id="enquiryType" name="enquiryType" required aria-describedby="enquiryType-error">
+                                <option value="">Choose one…</option>
+                                <option value="reservation">A table reservation</option>
+                                <option value="function">A private function</option>
+                                <option value="catering">A catering order</option>
+                            </select>
+                            <span class="field-error" id="enquiryType-error"></span>
+                        </div>
+
+                        <div class="form-group" id="packageGroup" hidden>
+                            <label for="package">Package <span class="req">*</span></label>
+                            <select id="package" name="package" aria-describedby="package-error">
+                                <option value="">Choose a package…</option>
+                            </select>
+                            <span class="field-error" id="package-error"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full name <span class="req">*</span></label>
+                                <input type="text" id="name" name="name" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="name-error">
+                                <span class="field-error" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                                <span class="field-error" id="email-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone number <span class="req">*</span></label>
+                            <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="082 123 4567" pattern="(\+27|0)[0-9 \-]{8,14}" aria-describedby="phone-error phone-hint">
+                            <small class="hint" id="phone-hint">South African number, e.g. 082 123 4567 or +27 82 123 4567.</small>
+                            <span class="field-error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date <span class="req">*</span></label>
+                                <input type="date" id="date" name="date" required aria-describedby="date-error">
+                                <span class="field-error" id="date-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Start time <span class="req">*</span></label>
+                                <input type="time" id="time" name="time" required step="900" aria-describedby="time-error">
+                                <span class="field-error" id="time-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of guests <span class="req">*</span></label>
+                            <input type="number" id="guests" name="guests" required min="1" max="200" step="1" inputmode="numeric" aria-describedby="guests-hint guests-error">
+                            <small class="hint" id="guests-hint">Choose an enquiry type to see the guest limits.</small>
+                            <span class="field-error" id="guests-error"></span>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <legend>How should we reply? <span class="req">*</span></legend>
+                            <div class="radio-group">
+                                <label><input type="radio" id="contactPref-email" name="contactPref" value="email"> Email</label>
+                                <label><input type="radio" id="contactPref-phone" name="contactPref" value="phone"> Phone</label>
+                            </div>
+                            <span class="field-error" id="contactPref-error"></span>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label for="message">Anything else we should know?</label>
+                            <textarea id="message" name="message" rows="4" maxlength="500" aria-describedby="message-error"></textarea>
+                            <span class="field-error" id="message-error"></span>
+                        </div>
+
+                        <div class="hp" aria-hidden="true">
+                            <label for="website">Leave this field empty</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="checkbox-row">
+                            <label><input type="checkbox" id="consent" name="consent" required> I agree that Olive &amp; Oak Café may use these details to reply to my enquiry. <span class="req">*</span></label>
+                            <span class="field-error" id="consent-error"></span>
+                        </div>
+
+                        <p class="form-summary" id="formSummary" role="alert"></p>
+                        <button type="submit" class="btn btn-primary">Check availability &amp; price</button>
+                    </form>
+                    <div id="enquiryResult" aria-live="polite"></div>
+                </div>
+
+                <aside class="form-card">
+                    <h2>Price Guide</h2>
+                    <p>Prices are per person unless stated. Final prices are confirmed by our team.</p>
+                    <ul class="price-list" id="priceGuide"></ul>
+                    <p>Table reservations are free. Groups of nine or more pay a refundable deposit.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Do I need to book a table?</button></h3>
+                    <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1"><p>Walk-ins are always welcome. We recommend booking for groups of six or more, especially on weekends. You can <a href="#enquiryForm">use the form above</a> to check availability.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">How far ahead should I book a private function?</button></h3>
+                    <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2"><p>Please enquire at least three days ahead. Catering orders need at least two days’ notice. The form above tells you straight away whether your date is available.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Do you cater for dietary requirements?</button></h3>
+                    <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3"><p>Our <a href="menu.html">menu</a> shows vegetarian and vegan dishes. If you have an allergy, please tell us in the message box when you enquire and again before you order.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Can I work or study at the café?</button></h3>
+                    <div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4"><p>Yes. We offer free Wi-Fi and a relaxed space. Weekday mornings are usually the quietest.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">What happens to my deposit?</button></h3>
+                    <div class="accordion-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5"><p>Table deposits for groups of nine or more are refundable. Function and catering deposits secure your date, and our team will confirm the terms when they reply.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-about">
+                <p class="footer-title">Olive &amp; Oak Café</p>
+                <p>Honest, locally sourced food in a warm community space.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <p class="footer-title">Quick Links</p>
+                <ul><li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="enquiry.html">Enquiries</a></li><li><a href="contact.html">Contact</a></li></ul>
+            </div>
+            <div class="footer-contact">
+                <p class="footer-title">Visit Us</p>
+                <p>123 Main Road<br>South Africa</p>
+                <p>Tel: <a href="tel:+27123456789">012 345 6789</a></p>
+                <p>Email: <a href="mailto:hello@oliveandoakcafe.co.za">hello@oliveandoakcafe.co.za</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; <span class="js-year">2026</span> Olive &amp; Oak Café. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>
