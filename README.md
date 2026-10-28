@@ -159,9 +159,8 @@ Tested in Chromium at desktop (1280 px) and mobile (375 px) widths:
 
 | # | Feedback received on Part 2 | Change made | File(s) |
 |---|---|---|---|
-| 1 | _To be completed — add the lecturer’s Part 2 feedback_ | | |
 
-### v3.0.0 — Part 3 (26 October 2026)
+### v3.0.0 — Part 3 (02 November 2026)
 
 **Added**
 - `enquiry.html`: enquiry form (reservation / private function / catering) that checks availability, calculates an estimate, and submits with AJAX; price guide; FAQ accordion (jQuery).
